@@ -4,3 +4,80 @@
     box-sizing: border-box;
 }
 
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-template-areas:
+    "Daniel Daniel Jonathan Kira"
+    "Jeantette Patrick Patrick Kira ";
+    position: relative;
+    top: 50px;
+    margin: 0 25px 0 25px;
+}
+
+.grid-item-1 {
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-color: hsl(263, 55%, 52%);
+  place-self: stretch;
+  grid-area: Daniel;
+}
+
+.grid-item-2 {
+  grid-area: Jonathan;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.grid-item-3 {
+  grid-area: Kira;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.grid-item-4 {
+  grid-area: Patrick;
+  background-color: hsl(219, 29%, 14%);
+}
+
+.grid-item-5 {
+  grid-area: Jeantette;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.grid-item-1,
+.grid-item-2,
+.grid-item-3,
+.grid-item-4,
+.grid-item-5 {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 25px;
+}
+
+header {
+  position: relative;
+  left: 75px;
+  bottom: 70px;
+}
+
+img {
+  border-radius: 50px;
+  border: 1px solid white;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: purple;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    display: inline-block
+  }
+}
