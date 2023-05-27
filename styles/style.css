@@ -1,9 +1,14 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+}
 
 .grid-container {
   display: grid;
@@ -12,9 +17,9 @@
   grid-template-areas:
     "Daniel Daniel Jonathan Kira"
     "Jeantette Patrick Patrick Kira ";
-    position: relative;
-    top: 50px;
-    margin: 0 25px 0 25px;
+  position: relative;
+  top: 50px;
+  margin: 0 25px 0 25px;
 }
 
 .grid-item-1 {
@@ -55,15 +60,35 @@
   padding: 25px;
 }
 
-header {
+figcaption {
   position: relative;
-  left: 75px;
-  bottom: 70px;
+  left: 70px;
+  bottom: 60px;
+}
+
+figcaption p {
+  color: hsl(0, 0%, 81%);
 }
 
 img {
   border-radius: 50px;
   border: 1px solid white;
+}
+
+.daniel,
+.jonathan,
+.patrick {
+  color: white;
+}
+
+.quote {
+  color: hsl(0, 0%, 81%);
+}
+
+.bold {
+  position: relative;
+  bottom: 30px;
+  font-size: 1.2rem;
 }
 
 /* Footer */
@@ -78,6 +103,6 @@ img {
 
 @media only screen and (max-width: 768px) {
   .grid-container {
-    display: inline-block
+    display: inline-block;
   }
 }
