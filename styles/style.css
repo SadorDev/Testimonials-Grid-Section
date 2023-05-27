@@ -81,14 +81,15 @@ img {
   color: white;
 }
 
-.quote {
-  color: hsl(0, 0%, 81%);
-}
-
-.bold {
+.speech-title {
   position: relative;
   bottom: 30px;
   font-size: 1.2rem;
+}
+
+.speech-main {
+  font-size: 1.4em;
+  color: hsl(0, 0%, 81%);
 }
 
 /* Footer */
