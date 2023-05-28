@@ -7,7 +7,8 @@
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 500;
-  font-size: 1em;
+  font-size: 13px;
+  background-color: #ecf2f8;
 }
 
 .grid-container {
@@ -18,12 +19,13 @@ body {
     "Daniel Daniel Jonathan Kira"
     "Jeantette Patrick Patrick Kira ";
   position: relative;
-  top: 50px;
-  margin: 0 25px 0 25px;
+  top: 100px;
+  margin: 0 75px 0 75px;
 }
 
 .grid-item-1 {
   background-image: url("../images/bg-pattern-quotation.svg");
+  background-position: 80% 0;
   background-repeat: no-repeat;
   background-color: hsl(263, 55%, 52%);
   place-self: stretch;
@@ -55,9 +57,8 @@ body {
 .grid-item-3,
 .grid-item-4,
 .grid-item-5 {
-  border-radius: 10px;
-  border: 1px solid black;
-  padding: 25px;
+  border-radius: 15px;
+  padding: 30px;
 }
 
 figcaption {
@@ -67,6 +68,7 @@ figcaption {
 }
 
 figcaption p {
+  font-size: 0.9em;
   color: hsl(0, 0%, 81%);
 }
 
@@ -78,33 +80,51 @@ img {
 .daniel,
 .jonathan,
 .patrick {
-  color: white;
+  color: hsl(0, 0%, 100%);
 }
 
 .speech-title {
   position: relative;
-  bottom: 30px;
-  font-size: 1.2rem;
+  bottom: 20px;
+  font-size: 1.4rem;
 }
 
 .speech-main {
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: hsl(0, 0%, 81%);
 }
 
 /* Footer */
 .footer {
-  position: fixed;
+  position: relative;
   left: 0;
-  bottom: 0;
+  top: 131px;
   width: 100%;
   color: purple;
   text-align: center;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1105px) {
   .grid-container {
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "Daniel Patrick"
+      "Jonathan Jeantette"
+      "Kira Kira";
+    gap: 2em;
+    padding: 2em;
+    align-items: unset;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
